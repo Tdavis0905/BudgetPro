@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BudgetPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>BudgetPro</h1>
+    <p>Track your income and expenses by category</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Add Income</h2>
+      <form id="income-form">
+        <input type="number" id="income-amount" placeholder="Amount" required />
+        <button type="submit">Add Income</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Add Category</h2>
+      <form id="new-category-form">
+        <input type="text" id="new-category" placeholder="New Category" required />
+        <button type="submit">Add Category</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input type="text" id="expense-desc" placeholder="Description" required />
+        <input type="number" id="expense-amount" placeholder="Amount" required />
+        <select id="expense-category"></select>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Set Category Limits</h2>
+      <form id="limit-form">
+        <select id="limit-category"></select>
+        <input type="number" id="limit-amount" placeholder="Limit Amount" required />
+        <button type="submit">Set Limit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <div id="summary"></div>
+      <canvas id="budgetChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
